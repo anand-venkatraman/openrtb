@@ -59,9 +59,9 @@ extend com.google.openrtb.BidRequest.Imp.Metric {
 extend com.google.openrtb.BidRequest.Imp.Video {
   optional Test1 testVideo = 110;
 }
-extend com.google.openrtb.BidRequest.Imp.Video.CompanionAd {
-  optional Test1 testCompanionAd = 110;
-}
+//extend com.google.openrtb.BidRequest.Imp.Video.CompanionAd {
+//  optional Test1 testCompanionAd = 110;
+//}
 extend com.google.openrtb.BidRequest.Imp.Audio {
   optional Test1 testAudio = 110;
 }
@@ -74,9 +74,9 @@ extend com.google.openrtb.BidRequest.Imp.Pmp {
 extend com.google.openrtb.BidRequest.Imp.Pmp.Deal {
   optional Test1 testDeal = 110;
 }
-extend com.google.openrtb.BidRequest.Producer {
-  optional Test1 testProducer = 110;
-}
+//extend com.google.openrtb.BidRequest.Producer {
+//  optional Test1 testProducer = 110;
+//}
 extend com.google.openrtb.BidRequest.Publisher {
   optional Test1 testPublisher = 110;
 }

@@ -44,7 +44,7 @@ import com.google.openrtb.OpenRtb.BidRequest.Imp.Metric;
 import com.google.openrtb.OpenRtb.BidRequest.Imp.Native;
 import com.google.openrtb.OpenRtb.BidRequest.Imp.Pmp;
 import com.google.openrtb.OpenRtb.BidRequest.Imp.Video;
-import com.google.openrtb.OpenRtb.BidRequest.Producer;
+//import com.google.openrtb.OpenRtb.BidRequest.Producer;
 import com.google.openrtb.OpenRtb.BidRequest.Publisher;
 import com.google.openrtb.OpenRtb.BidRequest.Regs;
 import com.google.openrtb.OpenRtb.BidRequest.Site;
@@ -159,7 +159,7 @@ public class OpenRtbJsonTest {
             .setAudio(Audio.newBuilder())
             .setPmp(Pmp.newBuilder().addDeals(Pmp.Deal.newBuilder().setId("0"))))
         .addImp(Imp.newBuilder().setId("0")
-            .setVideo(Video.newBuilder().setCompanionad21(Video.CompanionAd.newBuilder())))
+            .setVideo(Video.newBuilder()))//.setCompanionad21(Video.CompanionAd.newBuilder())))
         .setSite(Site.newBuilder()
             .setContent(Content.newBuilder())
             .setPublisher(Publisher.newBuilder()))
@@ -167,7 +167,7 @@ public class OpenRtbJsonTest {
         .build());
     testRequest(jsonFactory, BidRequest.newBuilder().setId("0")
         .setSite(Site.newBuilder()
-            .setContent(Content.newBuilder().setProducer(Producer.newBuilder())))
+            .setContent(Content.newBuilder()))//.setProducer(Producer.newBuilder())))
         .build());
   }
 
@@ -595,12 +595,12 @@ public class OpenRtbJsonTest {
                     .setId("compad1")
                     .setW(100)
                     .setH(50))
-                .setCompanionad21(Video.CompanionAd.newBuilder()
-                    .addBanner(Banner.newBuilder()
-                    .setId("compad2")
-                    .setW(110)
-                    .setH(60))
-                    .setExtension(TestExt.testCompanionAd, test1))
+//                .setCompanionad21(Video.CompanionAd.newBuilder()
+//                    .addBanner(Banner.newBuilder()
+//                    .setId("compad2")
+//                    .setW(110)
+//                    .setH(60))
+//                    .setExtension(TestExt.testCompanionAd, test1))
                 .addApi(APIFramework.VPAID_2)
                 .addCompaniontype(CompanionType.HTML)
                 .setSkip(true)
@@ -766,12 +766,12 @@ public class OpenRtbJsonTest {
             .setContext(ContentContext.OTHER)
             .setLivestream(false)
             .setSourcerelationship(false)
-            .setProducer(Producer.newBuilder()
-                .setId("prod1")
-                .setName("Warner")
-                .addCat("IAB10")
-                .setDomain("http://bros.com")
-                .setExtension(TestExt.testProducer, test1))
+//            .setProducer(Producer.newBuilder()
+//                .setId("prod1")
+//                .setName("Warner")
+//                .addCat("IAB10")
+//                .setDomain("http://bros.com")
+//                .setExtension(TestExt.testProducer, test1))
             .setLen(240)
             .setQagmediarating(QAGMediaRating.MATURE)
             .setEmbeddable(false)

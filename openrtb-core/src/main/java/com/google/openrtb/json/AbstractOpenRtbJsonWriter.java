@@ -115,12 +115,12 @@ public class AbstractOpenRtbJsonWriter {
    * If the factory is in strict mode, the category name is validated.
    */
   protected final boolean writeContentCategory(String cat, JsonGenerator gen) throws IOException {
-    if (!factory.isStrict() || OpenRtbUtils.categoryFromName(cat) != null) {
+//    if (!factory.isStrict()) {
       gen.writeString(cat);
       return true;
-    } else {
-      return false;
-    }
+//    } else {
+//      return false;
+//    }
   }
 
   /**

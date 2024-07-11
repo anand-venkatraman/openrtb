@@ -29,7 +29,7 @@ import com.google.openrtb.OpenRtb.BidRequest.Imp.Banner;
 import com.google.openrtb.OpenRtb.BidRequest.Imp.Native;
 import com.google.openrtb.OpenRtb.BidRequest.Imp.Pmp;
 import com.google.openrtb.OpenRtb.BidRequest.Imp.Video;
-import com.google.openrtb.OpenRtb.BidRequest.Producer;
+//import com.google.openrtb.OpenRtb.BidRequest.Producer;
 import com.google.openrtb.OpenRtb.BidRequest.Publisher;
 import com.google.openrtb.OpenRtb.BidRequest.Regs;
 import com.google.openrtb.OpenRtb.BidRequest.Site;
@@ -82,7 +82,7 @@ class OpenRtbJsonFactoryHelper {
         .register(new Test2Reader<>(TestExt.testRequest2, "test2ext"), BidRequest.Builder.class)
         .register(new Test1Reader<>(TestExt.testApp), App.Builder.class)
         .register(new Test1Reader<>(TestExt.testContent), Content.Builder.class)
-        .register(new Test1Reader<>(TestExt.testProducer), Producer.Builder.class)
+//        .register(new Test1Reader<>(TestExt.testProducer), Producer.Builder.class)
         .register(new Test1Reader<>(TestExt.testPublisher), Publisher.Builder.class)
         .register(new Test1Reader<>(TestExt.testDevice), Device.Builder.class)
         .register(new Test1Reader<>(TestExt.testGeo), Geo.Builder.class)
@@ -94,7 +94,7 @@ class OpenRtbJsonFactoryHelper {
         .register(new Test1Reader<>(TestExt.testPmp), Pmp.Builder.class)
         .register(new Test1Reader<>(TestExt.testDeal), Pmp.Deal.Builder.class)
         .register(new Test1Reader<>(TestExt.testVideo), Video.Builder.class)
-        .register(new Test1Reader<>(TestExt.testCompanionAd), Video.CompanionAd.Builder.class)
+//        .register(new Test1Reader<>(TestExt.testCompanionAd), Video.CompanionAd.Builder.class)
         .register(new Test1Reader<>(TestExt.testAudio), Audio.Builder.class)
         .register(new Test1Reader<>(TestExt.testRegs), Regs.Builder.class)
         .register(new Test1Reader<>(TestExt.testSite), Site.Builder.class)
@@ -114,13 +114,13 @@ class OpenRtbJsonFactoryHelper {
         .register(new Test1Writer(), Test.Test1.class, Data.Segment.class)
         .register(new Test1Writer(), Test.Test1.class, Publisher.class)
         .register(new Test1Writer(), Test.Test1.class, Content.class)
-        .register(new Test1Writer(), Test.Test1.class, Producer.class)
+//        .register(new Test1Writer(), Test.Test1.class, Producer.class)
         .register(new Test1Writer(), Test.Test1.class, Imp.class)
         .register(new Test1Writer(), Test.Test1.class, Imp.Metric.class)
         .register(new Test1Writer(), Test.Test1.class, Banner.class)
         .register(new Test1Writer(), Test.Test1.class, Banner.Format.class)
         .register(new Test1Writer(), Test.Test1.class, Video.class)
-        .register(new Test1Writer(), Test.Test1.class, Video.CompanionAd.class)
+//        .register(new Test1Writer(), Test.Test1.class, Video.CompanionAd.class)
         .register(new Test1Writer(), Test.Test1.class, Audio.class)
         .register(new Test1Writer(), Test.Test1.class, Native.class)
         .register(new Test1Writer(), Test.Test1.class, Pmp.class)

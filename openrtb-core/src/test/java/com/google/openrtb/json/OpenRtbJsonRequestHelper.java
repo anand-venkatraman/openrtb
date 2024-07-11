@@ -266,11 +266,11 @@ class OpenRtbJsonRequestHelper {
             .setBoxingallowed(false)
             .addPlaybackmethod(OpenRtb.PlaybackMethod.CLICK_TO_PLAY)
             .setPos(OpenRtb.AdPosition.ABOVE_THE_FOLD)
-            .setCompanionad21(OpenRtb.BidRequest.Imp.Video.CompanionAd.newBuilder()
-                .addBanner(OpenRtb.BidRequest.Imp.Banner.newBuilder()
-                    .setId("compad2")
-                    .setW(110)
-                    .setH(60)))
+//            .setCompanionad21(OpenRtb.BidRequest.Imp.Video.CompanionAd.newBuilder()
+//                .addBanner(OpenRtb.BidRequest.Imp.Banner.newBuilder()
+//                    .setId("compad2")
+//                    .setW(110)
+//                    .setH(60)))
             .setExtension(TestExt.testVideo, OpenRtbJsonFactoryHelper.test1));
 
     OpenRtb.BidRequest.Imp.Native.Builder nativ = OpenRtb.BidRequest.Imp.Native.newBuilder()

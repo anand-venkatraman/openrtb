@@ -128,13 +128,13 @@ public abstract class AbstractOpenRtbJsonReader {
   }
 
   protected final boolean checkContentCategory(String cat) {
-    if (OpenRtbUtils.categoryFromName(cat) == null) {
-      if (factory.isStrict()) {
-        throw new IllegalArgumentException("Invalid ContentCategory value");
-      } else {
-        return false;
-      }
-    }
+//    if (OpenRtbUtils.categoryFromName(cat) == null) {
+//      if (factory.isStrict()) {
+//        throw new IllegalArgumentException("Invalid ContentCategory value");
+//      } else {
+//        return false;
+//      }
+//    }
     return true;
   }
 

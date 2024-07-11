@@ -50,8 +50,8 @@ import com.google.openrtb.OpenRtb.BidRequest.Imp.Native;
 import com.google.openrtb.OpenRtb.BidRequest.Imp.Pmp;
 import com.google.openrtb.OpenRtb.BidRequest.Imp.Pmp.Deal;
 import com.google.openrtb.OpenRtb.BidRequest.Imp.Video;
-import com.google.openrtb.OpenRtb.BidRequest.Imp.Video.CompanionAd;
-import com.google.openrtb.OpenRtb.BidRequest.Producer;
+//import com.google.openrtb.OpenRtb.BidRequest.Imp.Video.CompanionAd;
+//import com.google.openrtb.OpenRtb.BidRequest.Producer;
 import com.google.openrtb.OpenRtb.BidRequest.Publisher;
 import com.google.openrtb.OpenRtb.BidRequest.Regs;
 import com.google.openrtb.OpenRtb.BidRequest.Site;
@@ -617,7 +617,7 @@ public class OpenRtbJsonReader extends AbstractOpenRtbJsonReader {
           }
         } else { // START_OBJECT
           // OpenRTB 2.1-
-          video.setCompanionad21(readCompanionAd(par));
+          // video.setCompanionad21(readCompanionAd(par));
         }
         break;
       case "api":
@@ -656,29 +656,29 @@ public class OpenRtbJsonReader extends AbstractOpenRtbJsonReader {
     }
   }
 
-  public final CompanionAd.Builder readCompanionAd(JsonParser par) throws IOException {
-    CompanionAd.Builder companionad = CompanionAd.newBuilder();
-    for (startObject(par); endObject(par); par.nextToken()) {
-      String fieldName = getCurrentName(par);
-      if (par.nextToken() != JsonToken.VALUE_NULL) {
-        readCompanionAdField(par, companionad, fieldName);
-      }
-    }
-    return companionad;
-  }
+//  public final CompanionAd.Builder readCompanionAd(JsonParser par) throws IOException {
+//    CompanionAd.Builder companionad = CompanionAd.newBuilder();
+//    for (startObject(par); endObject(par); par.nextToken()) {
+//      String fieldName = getCurrentName(par);
+//      if (par.nextToken() != JsonToken.VALUE_NULL) {
+//        readCompanionAdField(par, companionad, fieldName);
+//      }
+//    }
+//    return companionad;
+//  }
 
-  protected void readCompanionAdField(
-      JsonParser par, CompanionAd.Builder companionad, String fieldName) throws IOException {
-    switch (fieldName) {
-      case "banner":
-        for (startArray(par); endArray(par); par.nextToken()) {
-          companionad.addBanner(readBanner(par));
-        }
-        break;
-      default:
-        readOther(companionad, par, fieldName);
-    }
-  }
+//  protected void readCompanionAdField(
+//      JsonParser par, CompanionAd.Builder companionad, String fieldName) throws IOException {
+//    switch (fieldName) {
+//      case "banner":
+//        for (startArray(par); endArray(par); par.nextToken()) {
+//          companionad.addBanner(readBanner(par));
+//        }
+//        break;
+//      default:
+//        readOther(companionad, par, fieldName);
+//    }
+//  }
 
   public final Audio.Builder readAudio(JsonParser par) throws IOException {
     Audio.Builder audio = Audio.newBuilder();
@@ -1111,9 +1111,9 @@ public class OpenRtbJsonReader extends AbstractOpenRtbJsonReader {
       case "season":
         content.setSeason(par.getText());
         break;
-      case "producer":
-        content.setProducer(readProducer(par));
-        break;
+//      case "producer":
+//        content.setProducer(readProducer(par));
+//        break;
       case "url":
         content.setUrl(par.getText());
         break;
@@ -1198,41 +1198,41 @@ public class OpenRtbJsonReader extends AbstractOpenRtbJsonReader {
     }
   }
 
-  public final Producer.Builder readProducer(JsonParser par) throws IOException {
-    Producer.Builder producer = Producer.newBuilder();
-    for (startObject(par); endObject(par); par.nextToken()) {
-      String fieldName = getCurrentName(par);
-      if (par.nextToken() != JsonToken.VALUE_NULL) {
-        readProducerField(par, producer, fieldName);
-      }
-    }
-    return producer;
-  }
-
-  protected void readProducerField(JsonParser par, Producer.Builder producer, String fieldName)
-      throws IOException {
-    switch (fieldName) {
-      case "id":
-        producer.setId(par.getText());
-        break;
-      case "name":
-        producer.setName(par.getText());
-        break;
-      case "cat":
-        for (startArray(par); endArray(par); par.nextToken()) {
-          String cat = par.getText();
-          if (checkContentCategory(cat)) {
-            producer.addCat(cat);
-          }
-        }
-        break;
-      case "domain":
-        producer.setDomain(par.getText());
-        break;
-      default:
-        readOther(producer, par, fieldName);
-    }
-  }
+//  public final Producer.Builder readProducer(JsonParser par) throws IOException {
+//    Producer.Builder producer = Producer.newBuilder();
+//    for (startObject(par); endObject(par); par.nextToken()) {
+//      String fieldName = getCurrentName(par);
+//      if (par.nextToken() != JsonToken.VALUE_NULL) {
+//        readProducerField(par, producer, fieldName);
+//      }
+//    }
+//    return producer;
+//  }
+//
+//  protected void readProducerField(JsonParser par, Producer.Builder producer, String fieldName)
+//      throws IOException {
+//    switch (fieldName) {
+//      case "id":
+//        producer.setId(par.getText());
+//        break;
+//      case "name":
+//        producer.setName(par.getText());
+//        break;
+//      case "cat":
+//        for (startArray(par); endArray(par); par.nextToken()) {
+//          String cat = par.getText();
+//          if (checkContentCategory(cat)) {
+//            producer.addCat(cat);
+//          }
+//        }
+//        break;
+//      case "domain":
+//        producer.setDomain(par.getText());
+//        break;
+//      default:
+//        readOther(producer, par, fieldName);
+//    }
+//  }
 
   public final Publisher.Builder readPublisher(JsonParser par) throws IOException {
     Publisher.Builder publisher = Publisher.newBuilder();
