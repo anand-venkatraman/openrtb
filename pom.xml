@@ -93,8 +93,8 @@
   </reporting>
 
   <scm>
-    <connection>scm:git:https://github.com/google/openrtb.git</connection>
-    <developerConnection>scm:git:https://github.com/google/openrtb.git</developerConnection>
+    <connection>scm:git:https://github.com/anand-venkatraman/openrtb.git</connection>
+    <developerConnection>scm:git:https://github.com/anand-venkatraman/openrtb.git</developerConnection>
     <tag>openrtb-parent-1.5.13-PP</tag>
   </scm>
 
