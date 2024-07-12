@@ -95,7 +95,7 @@
   <scm>
     <connection>scm:git:https://github.com/anand-venkatraman/openrtb.git</connection>
     <developerConnection>scm:git:https://github.com/anand-venkatraman/openrtb.git</developerConnection>
-    <tag>openrtb-parent-1.5.13-PP</tag>
+    <tag>openrtb-parent-1.5.14-PP</tag>
   </scm>
 
   <build>
